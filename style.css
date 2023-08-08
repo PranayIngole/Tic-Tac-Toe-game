@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to top left, #462dfd 0%, #eb2ed5 100%);
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.holepage {
+    margin: 30px 60px;
+    padding: 10px;
+    height: 95vh;
+}
+
+nav {
+    /* background-color: rgba(255, 255, 255); */
+    color: white;
+    height: 60px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+nav div p {
+    /* color:#af019b; */
+    font-weight: 600;
+}
+
+.mainBody {
+    width: auto;
+    max-width: 900px;
+    margin: auto;
+    color: white;
+    position: relative;
+}
+
+
+.messageBody {
+    width: 100%;
+    height: 95vh;
+    margin: auto;
+    color: white;
+    background-color: #1b1b1b28;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.messageBody-backgroundGIF {
+    background-image: url(6k2.gif);
+    background-repeat: repeat;
+}
+
+.roundwin {
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    padding: 15px;
+    width: 40vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.roundwin span {
+    color: #af019b;
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 6px;
+}
+
+.roundwin p,
+label {
+    color: #af019b;
+    margin: 6px 0px;
+}
+
+.roundwin p {
+    font-weight: 600;
+}
+
+.roundwin input {
+    height: 16px;
+    max-width: 70%;
+    border: 2px solid #af019b;
+    padding: 5px;
+    border-radius: 4px;
+    color: #af019b;
+    font-size: 14px;
+}
+
+.roundWinner {
+    display: flex;
+}
+
+.roundwinner button {
+    margin: 0px 10px;
+}
+
+.winner {
+    padding-bottom: 6px;
+    color: #af019b;
+}
+
+.roundwin button {
+    background-color: #af019b !important;
+    color: white !important;
+    border: 2px solid #af019b !important;
+}
+
+.game-container {
+    height: 500px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.TicTacToeContainer {
+    margin: 0px 25px;
+}
+
+.players {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-1,
+.player-2 {
+    padding: 10px 34px;
+    margin: 10px;
+    background-color: white !important;
+    color: #af019b;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#chance {
+    animation: chance 2s ease 0s infinite normal forwards;
+}
+
+@keyframes chance {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateX(-6px);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: translateX(0px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    90% {
+        transform: translateX(0px);
+    }
+}
+
+.subcontainer-1-game {
+    display: grid;
+    grid-template-rows: repeat(3, 8vw);
+    grid-template-columns: repeat(3, 8vw);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    color: white;
+
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.box {
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 6vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.box:hover {
+    background-color: rgb(247, 141, 229);
+    border-radius: 10px;
+}
+
+.subcontainer-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+/*
+.box-corner1:hover{
+    border-radius: 10px 0px 0px 0px; 
+}
+
+.box-corner3:hover{
+    border-radius: 0px 10px 0px 0px; 
+}
+
+.box-corner7:hover{
+    border-radius: 0px 0px 0px 10px; 
+}
+
+.box-corner9:hover{
+    border-radius: 0px 0px 10px 0px; 
+}
+*/
+.PlayAgain,
+.NextRound,
+.lets-play,
+#reset {
+    /* color : rgb(241, 36, 207); */
+    color: #a800b3;
+    background-color: white;
+    padding: 8px 20px;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.lets-play {
+    margin-top: 10px;
+    padding: 8px 30px;
+}
+
+.information {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 6px 0px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.RunningRound,
+.TotalRound,
+#turn,
+.score {
+    text-align: center;
+    font-weight: 600;
+}
+
+/* .score > div{
+    margin-bottom:6px;
+} */
+
+.Score-box {
+    background-color: white;
+    color: #af019b;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0px 8px;
+    margin: 0px 4px;
+}
+
+.info {
+    text-align: center;
+}
+
+.info p {
+    font-size: 18px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .subcontainer-1-game {
+        grid-template-rows: repeat(3, 10vw);
+        grid-template-columns: repeat(3, 10vw);
+    }
+
+    .game {
+        flex-direction: column;
+    }
+
+    .information {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .game-container {
+        height: 400px;
+        margin-top: 35vh;
+    }
+
+    .mobileViewCenterScreen {
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .information {
+        font-size: 14px;
+    }
+
+    .subcontainer-1-game {
+        grid-template-rows: repeat(3, 24vw);
+        grid-template-columns: repeat(3, 24vw);
+    }
+
+    .player-1,
+    .player-2 {
+        font-size: 15px;
+    }
+
+    .roundwin {
+        padding: 30px;
+        width:70vw ;
+        height :25vh;
+    }
+
+    .roundwin p,
+    label {
+        font-size: 14px;
+    }
+
+    .roundwin input {
+        height: 12px;
+        max-width: 70%;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    /* .lets-play {
+        margin-top: 4px;
+        padding: 5px 24px;
+    } */
+
+    .holepage {
+        margin: 0;
+        border-radius: 0px;
+    }
+
+    nav {
+        font-size: 28px;
+    }
+
+    .lets-play,
+    #reset {
+        padding: 5px 9px;
+        font-size: 14px;
+        border-radius: 7px;
+    }
+.lets-play{
+    padding: 8px 19px;
+}
+    .TicTacToeContainer {
+        margin: 0px 15px;
+    }
+
+    .box {
+        font-size: 12vw;
+    }
+    .roundwinner button {
+        margin: 10px 10px;
+    }
+    .PlayAgain {
+        font-size: 14px ;
+    }
+}
